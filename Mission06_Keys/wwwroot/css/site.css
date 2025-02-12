@@ -78,7 +78,7 @@ body {
 
 .hero-title .title-three {
     font-size: clamp(0.9em, 1rem, 1rem);
-    cursor: pointer;
+    color: white;
 }
 
 .hero-title {

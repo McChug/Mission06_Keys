@@ -1,0 +1,22 @@
+﻿@model MovieEntry
+
+@if (Model.Title == "The Boss Baby 3")
+{
+    ViewData["Title"] = "Film Received";
+}
+else
+{
+    ViewData["Title"] = "The Boss Received";
+
+}
+
+<h1 class="display-4 mt-3">@ViewData["Title"]</h1>
+
+@if (Model.Title == "The Boss Baby 3")
+{
+<p>Thank you for submitting @Model.Title to the film collection of our friend Joel. G'day!</p>
+} 
+else
+{
+    <p>Wow, I love @Model.Title! We have entered it to the film collection.</p>
+}
