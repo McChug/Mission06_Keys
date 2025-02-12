@@ -2,11 +2,11 @@
 
 @if (Model.Title == "The Boss Baby 3")
 {
-    ViewData["Title"] = "Film Received";
+    ViewData["Title"] = "The Boss Received";
 }
 else
 {
-    ViewData["Title"] = "The Boss Received";
+    ViewData["Title"] = "Film Received";
 
 }
 
@@ -14,9 +14,9 @@ else
 
 @if (Model.Title == "The Boss Baby 3")
 {
-<p>Thank you for submitting @Model.Title to the film collection of our friend Joel. G'day!</p>
+    <p>Wow, I love @Model.Title! We have entered it to the film collection.</p>
 } 
 else
 {
-    <p>Wow, I love @Model.Title! We have entered it to the film collection.</p>
+    <p>Thank you for submitting @Model.Title to the film collection of our friend Joel. G'day!</p>
 }
