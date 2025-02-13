@@ -18,7 +18,7 @@
     </div>
     <div class="d-flex flex-column">
         <label asp-for="Year">Year</label>
-        <input asp-for="Year" required />
+        <input asp-for="Year" type="number" min="1800" max="3000" required />
     </div>
     <div class="d-flex flex-column">
         <label asp-for="Director">Director</label>

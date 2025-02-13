@@ -19,7 +19,7 @@ namespace Mission06_Keys.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     Category = table.Column<string>(type: "TEXT", nullable: false),
                     Title = table.Column<string>(type: "TEXT", nullable: false),
-                    Year = table.Column<string>(type: "TEXT", nullable: false),
+                    Year = table.Column<int>(type: "INTEGER", nullable: false),
                     Director = table.Column<string>(type: "TEXT", nullable: false),
                     Rating = table.Column<string>(type: "TEXT", nullable: false),
                     Edited = table.Column<bool>(type: "INTEGER", nullable: true),

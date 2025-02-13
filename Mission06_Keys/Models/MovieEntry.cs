@@ -14,8 +14,10 @@ namespace Mission06_Keys.Models
         [Required]
         public string Title { get; set; }
 
+        // Don't accept years outside of 1800-3000
+        [Range(1800, 3000)]
         [Required]
-        public string Year { get; set; }
+        public int Year { get; set; }
 
         [Required]
         public string Director { get; set; }
