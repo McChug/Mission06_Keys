@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Movie Collection";
+}
+
+@model List<Movie>
+
+<h1 class="display-4 mt-3">@ViewData["Title"]</h1>
+
+<a asp-controller="Home" asp-action="AddToCollection">Add to Collection</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <td>Title</td>
+            <td>Year</td>
+            <td>Category</td>
+            <td>Director</td>
+            <td>Rating</td>
+            <td>Edited</td>
+            <td>Lent to</td>
+            <td>Plex</td>
+            <td>Notes</td>
+            <td>Actions</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td>@x.Title</td>
+                <td>@x.Year</td>
+                <td>@(x.Category?.CategoryName ?? "No Category")</td>
+                <td>@x.Director</td>
+                <td>@x.Rating</td>
+                <td>@x.Edited</td>
+                <td>@x.LentTo</td>
+                <td>@x.CopiedToPlex</td>
+                <td>@x.Notes</td>
+                <td class="d-flex gap-3">
+                    <a asp-controller="Home" asp-action="Edit" asp-route-id="@x.MovieId" class="btn btn-info">Edit <i class="bi bi-pencil-square"></i></a>
+                    <a asp-controller="Home" asp-action="Delete" asp-route-id="@x.MovieId" class="btn btn-danger">Delete <i class="bi bi-trash"></i></a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
